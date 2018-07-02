@@ -1,10 +1,7 @@
-# AirlineReservationSystem
+# Angular Material Sample project
 
 ## Install dependencies
 Run `npm install` or `yarn` to install requisite dependenices.
-
-## Implementation note -
-### Signup & Login module have been implemented as part of coding POC. Firebase is used as DB & service provider.
 
  To login into application, first sign up with fresh test user, validation is implemented and all server error messages 
 are shown using Angular Universal snackbar. 
