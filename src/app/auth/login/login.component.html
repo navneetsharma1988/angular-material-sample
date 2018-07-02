@@ -1,0 +1,32 @@
+<!-- This form is created using reactive apporach to demonstrate -->
+<section>
+  <form 
+    fxLayout="column" 
+    fxLayoutAlign="center center"
+    fxLayoutGap="10px"
+    [formGroup]="loginForm"
+    (ngSubmit)="onSubmit()">
+    <mat-form-field id="email">
+      <input
+        type="email" 
+        placeholder="Your email"
+        matInput
+        formControlName="email"
+        required>
+      <mat-hint>Please enter a valid email.</mat-hint>
+      <mat-error>Invalid or missing email.</mat-error>   
+    </mat-form-field>
+    <mat-form-field id="password">
+      <input 
+        type="password" 
+        placeholder="Your password"
+        matInput
+        formControlName="password"
+        required>
+      <mat-hint>Please enter your password.</mat-hint>
+      <mat-error>Missing password.</mat-error>    
+    </mat-form-field>
+    <button id="submitBtn" *ngIf="!isLoading" type="submit" mat-raised-button color="primary" [disabled]="loginForm.invalid">Submit</button>
+    <mat-spinner *ngIf="isLoading"></mat-spinner>
+  </form>
+</section>
